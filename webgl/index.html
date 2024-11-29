@@ -55,18 +55,18 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/webgl.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/webgl.data.br",
-        frameworkUrl: buildUrl + "/webgl.framework.js.br",
-        codeUrl: buildUrl + "/webgl.wasm.br",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "gamebee calc",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
+      var buildUrl = "./Build";  // Add './' to indicate that it is relative to the root
+var loaderUrl = buildUrl + "/webgl.loader.js";
+var config = {
+  dataUrl: buildUrl + "/webgl.data.br",
+  frameworkUrl: buildUrl + "/webgl.framework.js.br",
+  codeUrl: buildUrl + "/webgl.wasm.br",
+  streamingAssetsUrl: "./StreamingAssets",  // Make sure this path is also correct
+  companyName: "DefaultCompany",
+  productName: "gamebee calc",
+  productVersion: "1.0",
+  showBanner: unityShowBanner,
+};
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
